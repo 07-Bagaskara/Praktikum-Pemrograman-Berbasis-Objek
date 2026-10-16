@@ -1,0 +1,16 @@
+package Jobsheet03;
+
+public class TestBioskop {
+    public static void main(String[] args) {
+        Tiket tiket1 = new Tiket("Avengers: Endgame", -50000); // Sengaja input negatif
+        
+        System.out.println("Film: " + tiket1.getJudulFilm());
+        System.out.println("Harga Tiket: Rp " + tiket1.getHargaDasar());
+        System.out.println("Status Lunas? " + tiket1.isStatusPembayaran());
+        
+        System.out.println("\nMemproses pembayaran...");
+        tiket1.lakukanPembayaran(); // Memanggil method pembayaran
+        
+        System.out.println("Status Lunas Terbaru? " + tiket1.isStatusPembayaran());
+    }
+}
